@@ -24,6 +24,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.ByteBuffer;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -110,6 +111,11 @@ public class TestRecordReaderImpl {
       readFully(position, bytes, 0, bytes.length);
     }
 
+    @Override
+    public List<ByteBuffer> readFullyScatterGather(long l, int i) throws IOException {
+      return null;
+    }
+    
     @Override
     public void seek(long position) {
       this.position = (int) position;

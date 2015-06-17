@@ -166,9 +166,11 @@
     <xerces.version>2.9.1</xerces.version>
     <zookeeper.version>3.4.6</zookeeper.version>
     <jpam.version>1.1</jpam.version>
+    <jayway-jsonpath.version>0.8.1</jayway-jsonpath.version>
     <felix.version>2.4.0</felix.version>
     <curator.version>2.6.0</curator.version>
     <jsr305.version>3.0.0</jsr305.version>
+    <mysql-connector-java.version>5.1.34</mysql-connector-java.version>
   </properties>
 
   <repositories>
@@ -215,6 +217,10 @@
        <snapshots>
          <enabled>false</enabled>
        </snapshots>
+     </repository>
+     <repository>
+      <id>conjars.org</id>
+      <url>http://conjars.org/repo</url>
     </repository>
   </repositories>
 
@@ -494,11 +500,6 @@
       <dependency>
         <groupId>org.apache.curator</groupId>
         <artifactId>curator-framework</artifactId>
-        <version>${curator.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.curator</groupId>
-        <artifactId>curator-recipes</artifactId>
         <version>${curator.version}</version>
       </dependency>
       <dependency>
